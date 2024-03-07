@@ -1,0 +1,374 @@
+/* Nand Desai
+  Business Card website
+  Stylesheet for nand-desai.html
+*/
+/* Navigation bar styling */
+
+.nav{
+  overflow:hidden;
+  position:-webkit-sticky;
+  position: sticky;
+  top:0;
+  background-color: rgba(242, 242, 242, 0.6);
+}
+@media screen and (max-width: 800px) {
+  .nav a {
+    text-align:right;
+
+  }
+  .navlinks{
+    display: none;
+  }
+}
+/* Styling the top left logo */
+.main-title{
+  padding-left:30px;
+  flex-grow:1;
+  color:rgba(4, 105, 62, 1);
+  font-size: 24px;
+  font-family: "Arial", serif;
+  font-weight: bold;
+  overflow:hidden;
+  transition:padding-left 0.5s;
+}
+.hidden-value{
+  visibility: visible;
+}
+.innernav{
+  display:flex;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .innernav{
+    display:block;
+  }
+  .main-title{
+    padding-left:0;
+    display:block;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:20px;
+    transition:padding-top 0.5s;
+  }
+  .hidden-value{
+    visibility: hidden;
+  }
+}
+/* Styling the top nav links */
+.navlinks {
+  font-family: "Open Sans",serif;
+  color:rgba(4, 105, 62, 1);
+  padding: 15px 15px;
+  text-decoration:none;
+  border-bottom: 3px solid;
+  border-color:rgba(242, 242, 242, 0.6);
+  overflow:hidden;
+  transition:0.3s;
+}
+.float-nav{
+  display:none;
+}
+@media screen and (max-width: 800px) {
+  .float-nav{
+    display:flex;
+    position:fixed;
+    justify-content: center;
+    margin:auto;
+    bottom:10px;
+    left:0;
+    right:0;
+    font-family: "Open Sans",serif;
+  }
+  .float-navlinks{
+    text-decoration:none;
+    color:black;
+    padding-left:15px;
+    padding-right:15px;
+    transition:0.3s;
+  }
+  .float-navlinks:hover{
+    background-color:rgba(4, 105, 62, 0.5);
+    padding: 10px 15px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+  }
+  .float-nav-back{
+    padding:10px 10px;
+    background:rgba(196,196,196,1);
+    border-radius:10px;
+    text-decoration:none;
+  }
+  .float-active{
+    background-color:rgba(4, 105, 62, 1);
+    padding:10px 15px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+  }
+  .float-active:hover{
+    background-color:rgba(4, 105, 62, 1);
+    padding:10px 15px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+  }
+}
+.active{
+  border-bottom: 3px solid;
+  border-color:rgba(184,126,12,1);
+}
+
+.navlinks:hover{
+  font-family: "Open Sans",serif;
+  color:rgba(4, 105, 62, 1);
+  padding: 15px 15px;
+  text-align:left;
+  text-decoration:none;
+  border-bottom: 3px solid;
+  border-color:rgba(184,126,12,1);
+  overflow:hidden;
+  transition:0.3s;
+}
+.bigname {
+  text-align:center;
+  margin-top:40px;
+  padding-bottom:45px;
+  font-family:"Merriweather",serif;
+  font-size: 60px;
+}
+
+body {
+  background-color:rgba(242, 242, 242, 1);
+  font-family:"Arial", sans-serif;
+}
+.placeholder{
+  padding:10px;
+  text-align:center;
+  padding-bottom: 35px;
+  margin:auto;
+}
+.profilepic{
+  border-width:thick;
+  border-radius:50%;
+  border: 5px solid rgba(4, 105, 62, 1);
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  transition:0.5s;
+}
+@media screen and (max-width: 800px) {
+  .profilepic{
+    width:250px;
+    height:250px;
+    transition:0.5s;
+  }
+}
+.fade-in {
+  animation: fadeIn 0.7s;
+  -webkit-animation: fadeIn 0.7s;
+  -moz-animation: fadeIn 0.7s;
+  -o-animation: fadeIn 0.7s;
+  -ms-animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+.downloadbutton{
+  text-align:center;
+  padding-bottom:50px;
+}
+.downloadbuttonlink:hover{
+  font-family:"Open Sans",sans-serif;
+  font-size:18px;
+  padding:10px 40px;
+  background-color:rgba(4, 105, 62, 1);
+  outline: 5px solid rgba(4, 105, 62, 1);
+  text-decoration:none;
+  color:white;
+}
+.downloadbuttonlink{
+  font-family:"Open Sans",sans-serif;
+  font-size:18px;
+  padding:10px 40px;
+  outline: 5px solid rgba(4, 105, 62, 1);
+  text-decoration:none;
+  color:black;
+  transition:0.5s;
+}
+.downloadbuttonlink:active{
+  font-family:"Open Sans",sans-serif;
+  font-size:18px;
+  padding:10px 40px;
+  outline: 5px solid rgba(4, 105, 62, 1);
+  text-decoration:none;
+  color:black;
+  background-color:white;
+  transition:0.5s;
+}
+.getintouch{
+  font-family:"Merriweather",serif;
+  font-weight:bold;
+  font-size:30px;
+  text-align:center;
+  margin-top:20px;
+  padding-top:40px;
+}
+.emailicon{
+  width:100px;
+  height:100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.material-icons.md-48 {
+  font-family: 'Material Icons';
+  font-size: 48px;
+  letter-spacing: normal;
+  direction: ltr;
+  padding:25px;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.linkedin{
+  width:100px;
+  height:100px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:70px;
+}
+.linkedinlogo{
+  padding-top: 26px;
+  padding-left:8px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+.contactlink:hover{
+  font-family:"Open Sans",sans-serif;
+  font-size:18px;
+  padding:10px 40px;
+  background-color:white;
+  outline: 5px solid rgba(4, 105, 62, 1);
+  text-decoration:none;
+  color:black;
+  transition:0.5s;
+}
+.contactlink{
+  font-family:"Open Sans",sans-serif;
+  font-size:18px;
+  padding:10px 40px;
+  outline: 5px solid rgba(4, 105, 62, 1);
+  text-decoration:none;
+  background-color:rgba(4, 105, 62, 1);
+  color:white;
+  transition:0.5s;
+}
+.location{
+  text-align:center;
+  margin-top:100px;
+  font-size:10px;
+  position:static;
+  bottom:0;
+}
+.resumeheaders{
+  text-align:center;
+  font-family: "Merriweather",serif;
+  font-size: 30px;
+  padding-top:40px;
+}
+.resumeblobs{
+  background-color: rgba(196,196,196,0.25);
+  border-radius:10px;
+  text-align:center;
+  padding:20px;
+}
+.resume-page{
+  display: flex;
+  align-items:stretch;
+  justify-content:center;
+  flex-direction:column;
+  flex-basis:800px;
+  padding-left:20px;
+  padding-right:20px;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.years{
+  font-weight:bold;
+  text-align:center;
+}
+.skill-panel{
+  display:flex;
+  flex-wrap:wrap;
+}
+.skill-box{
+  padding-top:5px;
+  padding-bottom:5px;
+  flex: 1 1 200px;
+  transition:0.3s;
+}
+.skill-level{
+  display:flex;
+  margin:auto;
+  justify-content:center;
+  width:100px;
+  margin-top:5px;
+  margin-bottom:5px;
+  font-size:12px;
+  background-color:rgba(4, 105, 62, 1);
+  color:white;
+  border-radius:10px;
+}
+.awards-years{
+  font-size:12px;
+  font-weight:bold;
+}
+.project-img{
+  display:flex;
+  flex-shrink:1;
+  max-width:100%;
+  border-radius:10px;
+  justify-content:center;
+  margin:auto;
+  align-items:center;
+}
+.material-icons.md-13{
+  font-size:13px;
+}
