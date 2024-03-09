@@ -318,7 +318,7 @@ body {
   background-color: rgba(196,196,196,0.25);
   border-radius:30px;
   text-align:center;
-  padding:20px;
+  padding:15px;
 }
 .resumeinfo{
   background-color:rgba(196, 196, 196, 0.5);
@@ -374,7 +374,7 @@ body {
   display:flex;
   flex-shrink:1;
   max-width:100%;
-  border-radius:10px;
+  border-radius:30px;
   justify-content:center;
   margin:auto;
   align-items:center;
