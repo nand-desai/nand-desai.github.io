@@ -82,34 +82,34 @@
   .float-navlinks{
     text-decoration:none;
     color:black;
-    padding-left:10px;
-    padding-right:10px;
+    padding-left:5px;
+    padding-right:5px;
     transition:0.2s;
   }
   .float-navlinks:hover{
     background-color:rgba(4, 105, 62, 0.5);
-    padding: 10px 10px;
+    padding: 5px 5px;
     border-radius:10px;
     text-decoration:none;
     color:white;
     transition:0.3s;
   }
   .float-nav-back{
-    padding:10px 10px;
+    padding:5px 5px;
     background:rgba(196,196,196,1);
     border-radius:10px;
     text-decoration:none;
   }
   .float-active{
     background-color:rgba(4, 105, 62, 1);
-    padding:10px 10px;
+    padding:5px 5px;
     border-radius:10px;
     text-decoration:none;
     color:white;
   }
   .float-active:hover{
     background-color:rgba(4, 105, 62, 1);
-    padding:10px 10px;
+    padding:5px 5px;
     border-radius:10px;
     text-decoration:none;
     color:white;
