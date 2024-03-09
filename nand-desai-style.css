@@ -1,6 +1,6 @@
 /* Nand Desai
   Business Card website
-  Stylesheet for nand-desai.html
+  Stylesheet for index.html
 */
 /* Navigation bar styling */
 
@@ -26,7 +26,7 @@
   flex-grow:1;
   color:rgba(4, 105, 62, 1);
   font-size: 24px;
-  font-family: "Arial", serif;
+  font-family:"Merriweather",serif;
   font-weight: bold;
   overflow:hidden;
   transition:padding-left 0.5s;
@@ -56,7 +56,7 @@
 }
 /* Styling the top nav links */
 .navlinks {
-  font-family: "Open Sans",serif;
+  font-family:"Merriweather",serif;
   color:rgba(4, 105, 62, 1);
   padding: 15px 15px;
   text-decoration:none;
@@ -77,7 +77,7 @@
     bottom:10px;
     left:0;
     right:0;
-    font-family: "Open Sans",serif;
+    font-family:"Merriweather",serif;
   }
   .float-navlinks{
     text-decoration:none;
@@ -121,7 +121,7 @@
 }
 
 .navlinks:hover{
-  font-family: "Open Sans",serif;
+  font-family:"Merriweather",serif;
   color:rgba(4, 105, 62, 1);
   padding: 15px 15px;
   text-align:left;
@@ -141,7 +141,7 @@
 
 body {
   background-color:rgba(242, 242, 242, 1);
-  font-family:"Arial", sans-serif;
+  font-family:"Lato", sans-serif;
 }
 .placeholder{
   padding:10px;
@@ -157,7 +157,6 @@ body {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
   transition:0.5s;
 }
 @media screen and (max-width: 800px) {
@@ -203,7 +202,7 @@ body {
   padding-bottom:50px;
 }
 .downloadbuttonlink:hover{
-  font-family:"Open Sans",sans-serif;
+  font-family:"Lato",sans-serif;
   font-size:18px;
   padding:10px 40px;
   background-color:rgba(4, 105, 62, 1);
@@ -212,7 +211,7 @@ body {
   color:white;
 }
 .downloadbuttonlink{
-  font-family:"Open Sans",sans-serif;
+  font-family:"Lato",sans-serif;
   font-size:18px;
   padding:10px 40px;
   outline: 5px solid rgba(4, 105, 62, 1);
@@ -221,7 +220,7 @@ body {
   transition:0.5s;
 }
 .downloadbuttonlink:active{
-  font-family:"Open Sans",sans-serif;
+  font-family:"Lato",sans-serif;
   font-size:18px;
   padding:10px 40px;
   outline: 5px solid rgba(4, 105, 62, 1);
@@ -280,7 +279,7 @@ body {
   user-drag: none;
 }
 .contactlink:hover{
-  font-family:"Open Sans",sans-serif;
+  font-family:"Lato",sans-serif;
   font-size:18px;
   padding:10px 40px;
   background-color:white;
@@ -290,7 +289,7 @@ body {
   transition:0.5s;
 }
 .contactlink{
-  font-family:"Open Sans",sans-serif;
+  font-family:"Lato",sans-serif;
   font-size:18px;
   padding:10px 40px;
   outline: 5px solid rgba(4, 105, 62, 1);
@@ -318,6 +317,14 @@ body {
   border-radius:30px;
   text-align:center;
   padding:20px;
+}
+.resumeinfo{
+  background-color:rgba(196, 196, 196, 0.5);
+  text-align:center;
+  border-radius:30px;
+  padding: 20px;
+  font-family: "Lato",sans-serif;
+  font-size:15px;
 }
 .resume-page{
   display: flex;
