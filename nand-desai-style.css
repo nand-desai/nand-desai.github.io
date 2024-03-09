@@ -217,6 +217,7 @@ body {
   outline: 5px solid rgba(4, 105, 62, 1);
   text-decoration:none;
   color:black;
+  border-radius: 10px;
   transition:0.5s;
 }
 .downloadbuttonlink:active{
@@ -295,6 +296,7 @@ body {
   outline: 5px solid rgba(4, 105, 62, 1);
   text-decoration:none;
   background-color:rgba(4, 105, 62, 1);
+  border-radius: 10px;
   color:white;
   transition:0.5s;
 }
