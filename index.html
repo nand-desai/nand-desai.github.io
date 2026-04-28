@@ -1,24 +1,114 @@
-<!-- Nand Desai, Business Card website, HTML file for home page -->
-
 <!DOCTYPE html>
 <html lang="en-CA">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0N6STV147"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M0N6STV147"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M0N6STV147');
+  </script>
+  <link rel="stylesheet" href="nand-desai-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <title>Nand Desai</title>
 
-  gtag('config', 'G-M0N6STV147');
-</script>
-<link rel="stylesheet" href="nand-desai-style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap" rel="stylesheet">
-<title>Nand Desai</title>
+  <style>
+    /* Photo frame & floating tags */
+    .photo-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .photo-bg-frame {
+      position: absolute;
+      inset: -14px;
+      background: rgba(29, 158, 117, 0.18);
+      border-radius: 180px 180px 130px 130px;
+      z-index: 0;
+    }
+
+    .profilepic {
+      position: relative;
+      z-index: 1;
+      border-radius: 160px 160px 110px 110px;
+      display: block;
+    }
+
+    .float-tag {
+      position: absolute;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 0.5px solid rgba(29,158,117,0.45);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.85);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      z-index: 2;
+    }
+
+    .float-tag::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #1D9E75;
+      flex-shrink: 0;
+    }
+
+    .float-tag-1 { top: 30px;    right: -80px; }
+    .float-tag-2 { bottom: 30px; left:  -80px; }
+
+    /* Eyebrow label above tagline */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #1D9E75;
+      margin-bottom: 0.5rem;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: #1D9E75;
+      flex-shrink: 0;
+    }
+
+    .eyebrow::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: #1D9E75;
+      flex-shrink: 0;
+    }
+
+    /* DM Serif Display for the big name */
+    .bigname {
+      font-family: 'DM Serif Display', serif !important;
+    }
+  </style>
 </head>
 <body>
   <div class="nav">
@@ -34,14 +124,28 @@
   <div>
     <div class="bigname">Nand Desai</div>
     <div class="fade-in">
-      <div class="placeholder"><img class="profilepic" src="Profile pic.png" alt="Nand Desai" width="300" height="300"></div>
+      <div class="placeholder">
+        <div class="photo-wrap">
+          <div class="photo-bg-frame"></div>
+          <img class="profilepic" src="Profile pic.png" alt="Nand Desai" width="300" height="300">
+          <div class="float-tag float-tag-1">Data Engineering</div>
+          <div class="float-tag float-tag-2">ML &amp; Analytics</div>
+        </div>
+      </div>
     </div>
-    <p style="text-align:center;font-family: Lato,sans-serif"> Hello, I am a Mechanical Engineer (EIT) and a Data Scientist <br> my passion is energy and environment. </p>
+    <div style="text-align:center; margin-top: 1.5rem;">
+      <div class="eyebrow">Data Science Engineer</div>
+      <p style="font-family: Lato, sans-serif;">
+        I design and build end-to-end data systems — from pipelines and models<br>
+        to real-time solutions that turn raw information into decisions that matter.
+      </p>
+    </div>
     <div class="downloadbutton" style="padding-top:35px">
       <a class="downloadbuttonlink" href="resume.html">View Resume</a>
     </div>
   </div>
   <div class="location">Calgary, AB, Canada</div>
+
   <!-- Bottom navi bar -->
   <div class="float-nav">
     <div class="float-nav-back">

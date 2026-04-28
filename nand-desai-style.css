@@ -2,168 +2,203 @@
   Business Card website
   Stylesheet for index.html
 */
+
+:root {
+  --primary-green: #10a37f;
+  --dark-bg: #0d0d0d;
+  --card-bg: #1a1a1a;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b0b0b0;
+  --border-color: #2a2a2a;
+  --accent-green: #13c081;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: 'Open Sans', 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
 /* Navigation bar styling */
 
 .nav{
-  overflow:hidden;
-  position:-webkit-sticky;
+  background: linear-gradient(135deg, rgba(16, 163, 127, 0.1) 0%, rgba(16, 163, 127, 0.05) 100%);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
   position: sticky;
-  top:0;
-  background-color: rgba(242, 242, 242, 0.6);
+  top: 0;
+  z-index: 100;
 }
 @media screen and (max-width: 800px) {
   .nav a {
-    text-align:right;
-
+    text-align: right;
   }
   .navlinks{
-    display: none;
+    display: inline-block;
+    padding: 0.5rem 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+  .innernav {
+    gap: 0.5rem !important;
+    padding: 0.75rem 1rem !important;
+  }
+  .main-title {
+    font-size: 1.2rem !important;
   }
 }
+
 /* Styling the top left logo */
 .main-title{
-  padding-left:30px;
-  flex-grow:1;
-  color:rgba(4, 105, 62, 1);
-  font-size: 24px;
-  font-family:"Merriweather",serif;
-  font-weight: bold;
-  overflow:hidden;
-  transition:padding-left 0.5s;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
 .hidden-value{
   visibility: visible;
 }
+
 .innernav{
-  display:flex;
+  display: flex;
   align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 @media screen and (max-width: 800px) {
   .innernav{
-    display:block;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
   }
   .main-title{
-    padding-left:0;
-    display:block;
-    text-align:center;
-    padding-top:20px;
-    padding-bottom:20px;
-    transition:padding-top 0.5s;
+    text-align: left;
+    font-size: 1.2rem;
   }
   .hidden-value{
     visibility: hidden;
   }
 }
+
 /* Styling the top nav links */
 .navlinks {
-  font-family:"Merriweather",serif;
-  color:rgba(4, 105, 62, 1);
-  padding: 15px 15px;
-  text-decoration:none;
-  border-bottom: 3px solid;
-  border-color:rgba(242, 242, 242, 0.6);
-  overflow:hidden;
-  transition:0.3s;
+  color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
+
+.navlinks:hover,
+.navlinks.active {
+  color: var(--primary-green);
+}
+
+.navlinks.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-green);
+  border-radius: 1px;
+}
+
 .float-nav{
-  display:none;
+  display: none;
 }
+
 @media screen and (max-width: 800px) {
   .float-nav{
-    display:flex;
-    position:fixed;
+    display: flex;
+    position: fixed;
     justify-content: center;
-    margin:auto;
-    bottom:10px;
-    left:0;
-    right:0;
-    font-family:"Merriweather",serif;
+    margin: auto;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    z-index: 50;
   }
-  .float-navlinks{
-    text-decoration:none;
-    color:black;
-    padding-left:10px;
-    padding-right:10px;
-    transition:0.2s;
-  }
-  .float-navlinks:hover{
-    background-color:rgba(4, 105, 62, 0.5);
-    padding: 10px 10px;
-    border-radius:10px;
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-  }
+  
   .float-nav-back{
-    padding:10px 10px;
-    background:rgba(196,196,196,1);
-    border-radius:10px;
-    text-decoration:none;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(16, 163, 127, 0.2);
   }
-  .float-active{
-    background-color:rgba(4, 105, 62, 1);
-    padding:10px 10px;
-    border-radius:10px;
-    text-decoration:none;
-    color:white;
+
+  .float-navlinks{
+    text-decoration: none;
+    color: var(--text-secondary);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.75rem;
+    white-space: nowrap;
   }
-  .float-active:hover{
-    background-color:rgba(4, 105, 62, 1);
-    padding:10px 10px;
-    border-radius:10px;
-    text-decoration:none;
-    color:white;
+
+  .float-navlinks:hover,
+  .float-navlinks.float-active{
+    color: var(--accent-green);
+    background-color: rgba(16, 163, 127, 0.15);
   }
-}
-.active{
-  border-bottom: 3px solid;
-  border-color:rgba(184,126,12,1);
 }
 
-.navlinks:hover{
-  font-family:"Merriweather",serif;
-  color:rgba(4, 105, 62, 1);
-  padding: 15px 15px;
-  text-align:left;
-  text-decoration:none;
-  border-bottom: 3px solid;
-  border-color:rgba(184,126,12,1);
-  overflow:hidden;
-  transition:0.3s;
+.active{
+  color: var(--primary-green);
 }
 .bigname {
-  text-align:center;
-  margin-top:40px;
-  padding-bottom:45px;
-  font-family:"Merriweather",serif;
-  font-size: 60px;
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-body {
-  background-color:rgba(242, 242, 242, 1);
-  font-family:"Lato", sans-serif;
-}
 .placeholder{
-  padding:10px;
-  text-align:center;
-  padding-bottom: 35px;
-  margin:auto;
+  padding: 1rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  margin: auto;
+  color: var(--text-secondary);
 }
 .profilepic{
-  border-width:thick;
-  border-radius:50%;
-  border: 5px solid rgba(4, 105, 62, 1);
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  transition:0.5s;
+  border-radius: 50%;
+  border: 5px solid var(--primary-green);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.5s ease;
 }
+
 @media screen and (max-width: 800px) {
   .profilepic{
-    width:250px;
-    height:250px;
-    transition:0.5s;
+    width: 250px;
+    height: 250px;
+    transition: 0.5s;
   }
 }
 .fade-in {
@@ -198,187 +233,238 @@ body {
   100% {opacity:1;}
 }
 .downloadbutton{
-  text-align:center;
-  padding-bottom:50px;
+  text-align: center;
+  padding-bottom: 3rem;
 }
-.downloadbuttonlink:hover{
-  font-family:"Lato",sans-serif;
-  font-size:18px;
-  padding:10px 40px;
-  background-color:rgba(4, 105, 62, 1);
-  outline: 5px solid rgba(4, 105, 62, 1);
-  text-decoration:none;
-  color:white;
-}
+
 .downloadbuttonlink{
-  font-family:"Lato",sans-serif;
-  font-size:18px;
-  padding:10px 40px;
-  outline: 5px solid rgba(4, 105, 62, 1);
-  text-decoration:none;
-  color:black;
-  border-radius: 10px;
-  transition:0.5s;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125rem;
+  padding: 0.75rem 2.5rem;
+  background-color: transparent;
+  border: 2px solid var(--primary-green);
+  text-decoration: none;
+  color: var(--primary-green);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
+
+.downloadbuttonlink:hover{
+  background-color: var(--primary-green);
+  color: var(--dark-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 163, 127, 0.3);
+}
+
 .downloadbuttonlink:active{
-  font-family:"Lato",sans-serif;
-  font-size:18px;
-  padding:10px 40px;
-  outline: 5px solid rgba(4, 105, 62, 1);
-  text-decoration:none;
-  color:black;
-  background-color:white;
-  transition:0.5s;
+  transform: translateY(0);
 }
 .getintouch{
-  font-family:"Merriweather",serif;
-  font-weight:bold;
-  font-size:30px;
-  text-align:center;
-  margin-top:20px;
-  padding-top:40px;
+  font-weight: bold;
+  font-size: 1.875rem;
+  text-align: center;
+  margin-top: 1.25rem;
+  padding-top: 2.5rem;
+  color: var(--accent-green);
 }
+
 .emailicon{
-  width:100px;
-  height:100px;
+  width: 100px;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 3rem;
 }
+
 .material-icons.md-48 {
   font-family: 'Material Icons';
   font-size: 48px;
   letter-spacing: normal;
   direction: ltr;
-  padding:25px;
-
-  /* Support for all WebKit browsers. */
+  padding: 1.5rem;
+  color: var(--primary-green);
   -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
   font-feature-settings: 'liga';
 }
 .linkedin{
-  width:100px;
-  height:100px;
+  width: 100px;
+  height: 100px;
   margin-left: auto;
-  margin-right:auto;
-  margin-top:70px;
+  margin-right: auto;
+  margin-top: 4rem;
 }
+
 .linkedinlogo{
   padding-top: 26px;
-  padding-left:8px;
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.contactlink:hover{
-  font-family:"Lato",sans-serif;
-  font-size:18px;
-  padding:10px 40px;
-  background-color:white;
-  outline: 5px solid rgba(4, 105, 62, 1);
-  text-decoration:none;
-  color:black;
-  transition:0.5s;
-}
+
 .contactlink{
-  font-family:"Lato",sans-serif;
-  font-size:18px;
-  padding:10px 40px;
-  outline: 5px solid rgba(4, 105, 62, 1);
-  text-decoration:none;
-  background-color:rgba(4, 105, 62, 1);
-  border-radius: 10px;
-  color:white;
-  transition:0.5s;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125rem;
+  padding: 0.75rem 2.5rem;
+  background-color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  text-decoration: none;
+  color: var(--dark-bg);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.contactlink:hover{
+  background-color: transparent;
+  color: var(--primary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 163, 127, 0.3);
 }
 .location{
-  text-align:center;
-  margin-top:100px;
-  margin-bottom: 70px;
-  font-size:10px;
-  position:static;
-  bottom:0;
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  font-size: 0.625rem;
+  position: static;
+  bottom: 0;
+  color: var(--text-secondary);
 }
+
 .resumeheaders{
-  text-align:center;
-  font-family: "Merriweather",serif;
-  font-size: 30px;
-  padding-top:40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--accent-green);
 }
+
+.resumeheaders .material-icons {
+  color: var(--primary-green);
+  font-size: 2rem;
+}
+
 .resumeblobs{
-  background-color: rgba(196,196,196,0.25);
-  border-radius:30px;
-  text-align:center;
-  padding:15px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
+
+.resumeblobs:hover {
+  border-color: var(--primary-green);
+  box-shadow: 0 8px 16px rgba(16, 163, 127, 0.1);
+  transform: translateY(-2px);
+}
+
+.resumeblobs p {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.resumeblobs p strong {
+  color: var(--accent-green);
+  font-size: 1.1rem;
+}
+
+.resumeblobs .material-icons {
+  color: var(--primary-green);
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
 .resumeinfo{
-  background-color:rgba(196, 196, 196, 0.5);
-  text-align:center;
-  border-radius:30px;
-  padding: 20px;
-  font-family: "Lato",sans-serif;
-  font-size:15px;
+  background-color: rgba(16, 163, 127, 0.08);
+  border-left: 3px solid var(--primary-green);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  text-align: left;
 }
+
+.resumeinfo p {
+  color: var(--text-secondary);
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
 .resume-page{
   display: flex;
-  align-items:stretch;
-  justify-content:center;
-  flex-direction:column;
-  flex-basis:800px;
-  padding-left:20px;
-  padding-right:20px;
-  max-width:500px;
-  margin-left:auto;
-  margin-right:auto;
+  flex-direction: column;
+  max-width: 900px;
+  padding: 3rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .years{
-  font-weight:bold;
-  text-align:center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .skill-panel{
-  display:flex;
-  flex-wrap:wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
+
 .skill-box{
-  padding-top:5px;
-  padding-bottom:5px;
-  flex: 1 1 200px;
-  transition:0.3s;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
+
+.skill-box:hover {
+  border-color: var(--primary-green);
+  background-color: rgba(16, 163, 127, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(16, 163, 127, 0.15);
+}
+
 .skill-level{
-  display:flex;
-  margin:auto;
-  justify-content:center;
-  width:100px;
-  margin-top:5px;
-  margin-bottom:5px;
-  font-size:12px;
-  background-color:rgba(4, 105, 62, 1);
-  color:white;
-  border-radius:10px;
+  color: var(--primary-green);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
+
 .awards-years{
-  font-size:12px;
-  font-weight:bold;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
 }
 .project-img{
-  display:flex;
-  flex-shrink:1;
-  max-width:100%;
-  border-radius:30px;
-  justify-content:center;
-  margin:auto;
-  align-items:center;
+  display: flex;
+  flex-shrink: 1;
+  max-width: 100%;
+  border-radius: 12px;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
 }
+
 .material-icons.md-13{
-  font-size:13px;
+  font-size: 13px;
+  color: var(--primary-green);
 }
